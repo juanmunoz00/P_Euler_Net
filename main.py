@@ -1,7 +1,49 @@
 """
 Solving https://projecteuler.net/archives
 """
-sol = 2  ##Select solution to display
+prime_nums_100 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+
+sol = 3  ##Select solution to display
+
+##Largest prime factor
+def Sol_03(num):
+  print("Init...")
+  original_num = num
+  primeNums = []
+  residue = num
+  pI = 0
+  residue_op = 2
+
+  while ( residue_op > 1 ):
+    prime = prime_nums_100[pI]
+    residue_op = num / prime
+    residue = ( (num % prime) == 0 )#isinstance(residue_op, int)
+    #print(str(num) + "|" + str(prime) + "(" + str(residue_op) + ")[" + str(num / 1) + "]")
+
+    if( residue ):
+      ##Is prime factor
+      primeNums.append(prime)##(residue_op)
+      num = residue_op
+    else:
+      pI += 1
+
+  print(primeNums)
+  ##Check
+  i = 1
+  for n in primeNums:
+    if ( i == 1 ):
+      m = n
+    else:
+      m = m * n
+    
+    i += 1
+  
+  print(str(original_num))
+  print(str(m))
+  if ( m == original_num):
+    print("Lista de primos es óptima")
+  else:
+    print("Lista de primos no es óptima")
 
 
 ##Even Fibonacci numbers
@@ -46,5 +88,6 @@ def Sol_01():
 	print(str(sum))
 
 
+if (sol == 3): Sol_03(7000000000000) ##600,851,475,143
 if (sol == 2): Sol_02(4000001)
 if (sol == 1): Sol_01()
