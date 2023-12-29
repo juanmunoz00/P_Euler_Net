@@ -1,10 +1,8 @@
 from euler import EulerNet
 from binarysearchtree import BinarySearchTree
-from binarysearchtree import Node
 
 Euler = EulerNet()
-Tree = BinarySearchTree()
-_Node = Node(None)
+Tree = BinarySearchTree(None)
 
 BINARY_SEARCH_TREE = 1
 SUM_OF_MULTIPLES_3_5 = 0
@@ -20,11 +18,10 @@ Create this tree:
 if ( BINARY_SEARCH_TREE == 1 ):
   
   Tree.Insert(9)
-  inserted_node_value = Tree.root.value
-  print(f'Value of the inserted node: {inserted_node_value}')
-  
-  #Tree.Insert(4)
-  #Tree.Insert(6)
+  Tree.Insert(4)
+  Tree.Insert(6)
+  #inserted_node_value = Tree.root.value
+  #print(f'Value of the inserted node: {inserted_node_value}')
   #Tree.Insert(20)
   #Tree.Insert(170)
   #Tree.Insert(15)
