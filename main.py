@@ -20,21 +20,32 @@ Create this tree:
 """
 if ( BINARY_SEARCH_TREE == 1 ):
 
+  
   numbers = [9,4,6,20,170,15,1]
 
+  print(f'\n Root value:{Tree.GetRootValue()}')
+  
+  print(f'\nCreate binary tree')
   for n in numbers:
     Tree.Insert(n)
     print(f' {n} exists? {Tree.Exists(n)} ')
   
   #print(f' Min value: {Tree.GetMinValue()} ')
   #print(f' Max value: {Tree.GetMaxValue()} ')
+
+  print(f'\n Root value:{Tree.GetRootValue()}')
+
   
-  d = 15
+  print(f'\nDelete a value from binary tree')
+  d = 170
   print(f' {d} exists? {Tree.Exists(d)} ')
+  
   Tree.Delete(d)
   print(f' {d} exists? {Tree.Exists(d)} ')
 
+print(f'\nMax value: { Tree.GetMaxValue() } ')
 
+## Euler problems from Euler.Net
 if ( SUM_OF_MULTIPLES_3_5 == 1 ):
   n = 1000
   print(f'Sum Of Multiples Of 3 And 5 of {n} :     {Euler.SumOfMultiplesOf3And5(n)}' )

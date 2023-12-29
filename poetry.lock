@@ -1275,6 +1275,22 @@ docs = ["nbsphinx", "nbsphinx-link", "numpydoc", "sphinx (>=1.4.3)", "sphinx-boo
 tests = ["codecov", "ipywidgets", "matplotlib", "pandas", "pytest", "pytest-cov", "pytest-xdist", "splot"]
 
 [[package]]
+name = "graphviz"
+version = "0.20.1"
+description = "Simple Python interface for Graphviz"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "graphviz-0.20.1-py3-none-any.whl", hash = "sha256:587c58a223b51611c0cf461132da386edd896a029524ca61a1462b880bf97977"},
+    {file = "graphviz-0.20.1.zip", hash = "sha256:8c58f14adaa3b947daf26c19bc1e98c4e0702cdc31cf99153e6f06904d492bf8"},
+]
+
+[package.extras]
+dev = ["flake8", "pep8-naming", "tox (>=3)", "twine", "wheel"]
+docs = ["sphinx (>=5)", "sphinx-autodoc-typehints", "sphinx-rtd-theme"]
+test = ["coverage", "mock (>=4)", "pytest (>=7)", "pytest-cov", "pytest-mock (>=3)"]
+
+[[package]]
 name = "greenlet"
 version = "3.0.3"
 description = "Lightweight in-process concurrent programming"
@@ -4864,4 +4880,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "c8e6482c12a8247628951842fa0cc71b8994b34cbccd9380416c5ca417e9a02f"
+content-hash = "3293eac2e285190d1b29d8aef58565d68ce3d4e89342a880da41c80c9fd6757c"

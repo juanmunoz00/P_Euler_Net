@@ -6,6 +6,7 @@ On: Dec. 2023
 """
 from datetime import datetime
 import math
+import graphviz
 """
 Binary Search Tree
 """
@@ -13,13 +14,13 @@ Binary Search Tree
 class BinarySearchTree:
 
   def __init__(self, value):
-    #self.root = root
     self.left = None
     self.right = None
     self.value = value
 
   def Insert(self, value):
     try:
+      
       if ( not self.value ):
         self.value = value
         return
@@ -44,7 +45,7 @@ class BinarySearchTree:
         self.right.Insert(value)
         return
       self.right = BinarySearchTree(value)
-  
+    
     except Exception as e: print(e)
 
   def Delete(self, value):
@@ -85,6 +86,14 @@ class BinarySearchTree:
       return current.value
     except Exception as e: print(e)
   
+  def GetRootValue(self):
+    try:
+      if ( self.value ):
+        return self.value
+      return None
+        
+        
+    except Exception as e: print(e)
   
   def GetMaxValue(self):
     try:
@@ -95,7 +104,7 @@ class BinarySearchTree:
   
       return current.value
     except Exception as e: print(e)
-
+  
   def Exists(self, value):
     try:
       if value == self.value:      
