@@ -3,8 +3,6 @@ import math
 """
 Binary Search Tree
 """
-
-
 class Node:
 
   def __init__(self, value):
@@ -19,11 +17,19 @@ class BinarySearchTree:
     self.root = root
 
   def Insert(self, value):
-    pass
-
+    newNode = Node(value) # Instantiating a new Node
+    """
+    If the root is None, then the tree is empty so
+    add the new node as the root.
+    """
+    if ( self.root == None ):
+      self.root = newNode
+      return
+      
   def Lookup(self, value):
     pass
 
+  # Remove
 
 """
 Binary Search Tree
