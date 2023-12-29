@@ -1,7 +1,7 @@
 from datetime import datetime
 import math
 
-class EulerNet:
+class EulerNet:  
   def SumOfMultiplesOf3And5(self, n):
     nSum = 0
     for i in range(n):
